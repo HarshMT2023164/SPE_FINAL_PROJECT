@@ -1,0 +1,38 @@
+
+
+<div class="input-group mb-3 w-75">
+  <input type="text" class="form-control search-input" placeholder="search pizza" [(ngModel)]="sortBy" aria-describedby="basic-addon2" 
+  [formControl]="searchControl">
+  <div class="input-group-append">
+    <button class="btn btn-outline-secondary" type="button" (click)="onSearch()">Search</button>
+  </div>
+  
+</div>
+<mat-form-field appearance="fill" class="w-25">
+  <mat-label>SortBy</mat-label>
+  <mat-select [(ngModel)] ="sortBy" name="sort" (selectionChange)="onSort()">
+    <mat-option *ngFor="let sort of sortValues" [value]="sort">
+      {{sort}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+    <!-- <button mat-raised-button color="primary" (click)="onSearch()">search</button> -->
+
+
+<mat-card class="pizza-card " *ngFor="let pizza of pizzaList ; let i = index">
+  <mat-card-title-group>
+    <mat-card-title>{{pizza.name}}</mat-card-title>
+    <mat-card-subtitle>Rs. {{pizza.price}}</mat-card-subtitle>
+    <img mat-card-sm-image src={{pizza.url}} >
+  </mat-card-title-group>  
+  <mat-card-content>
+    <div>
+      {{pizza.popularity}}
+      <mat-icon class="star-icon">star</mat-icon>
+    </div>
+    
+    <button class="btn btn-primary card-button"  (click)="addToCart(i);">Add to cart</button>
+  </mat-card-content>
+</mat-card>
+
+

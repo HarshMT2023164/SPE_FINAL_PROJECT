@@ -1,0 +1,27 @@
+<div class="user-form">
+    <h2>Register</h2>
+    <form [formGroup]="userDetailsForm"  (ngSubmit)="onSubmit()">
+        <mat-form-field class="user-form-field" appearance="fill">
+            <mat-label>full name</mat-label>
+            <input matInput formControlName="name"  >
+          </mat-form-field><br>
+          <mat-form-field class="user-form-field"  appearance="fill">
+            <mat-label>address</mat-label>
+            <textarea matInput formControlName="address" ></textarea>
+          </mat-form-field><br>
+          <mat-form-field class="user-form-field"  appearance="fill">
+            <mat-label>Phone number </mat-label>
+            <input matInput formControlName="phone" type="number" >
+          </mat-form-field><br>
+          <mat-form-field class="user-form-field"  appearance="fill">
+            <mat-label>email</mat-label>
+            <input matInput type="email" formControlName="email"  >
+          </mat-form-field><br>
+
+          <mat-form-field class="user-form-field"  appearance="fill">
+            <mat-label>password</mat-label>
+            <input matInput type="password" formControlName="password"  >
+          </mat-form-field><br>
+          <button mat-raised-button type="submit" color="primary">submit</button>
+    </form>
+</div>

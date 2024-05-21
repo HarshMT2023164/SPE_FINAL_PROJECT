@@ -1,0 +1,18 @@
+.actions{
+    width: 40px;
+    padding: 2px;
+}
+.checkout-button{
+    margin-top: 10px;
+}
+.pizza-card{
+    margin-top: 10px;
+}
+.card-body{
+    max-height: calc(100vh - 300px);
+    overflow: auto;
+
+}
+.card-header h1{
+    font-size: xx-large;
+}

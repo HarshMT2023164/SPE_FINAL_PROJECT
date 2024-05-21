@@ -1,0 +1,30 @@
+    <div class="order-container container">
+        <div class="card" *ngFor="let order of orderList ; let i = index ">
+            <div class="card-header">
+              Order # {{i}}
+            </div>
+            <div class="card-body">
+                <mat-card class="pizza-card" *ngFor="let pizza of getPizzaListFromCartMap(order.cartList); let j = index" >
+                    <!-- <span>{{order.addedCart[j].quantity}}x {{pizza.name}}</span>     -->
+
+                    <mat-card-title-group>
+                      <mat-card-title>{{pizza.name}}</mat-card-title>
+                      <mat-card-subtitle>Rs. {{pizza.price}}</mat-card-subtitle>
+                      <img mat-card-sm-image src={{pizza.url}} >
+                    </mat-card-title-group>
+                    <mat-card-content>
+                      <span>
+                        <!-- <button class="btn btn-primary actions" type="button" (click)="decrement(i)" >-</button> -->
+                        Quantity : {{order.cartList[j].quantity}}
+                        <!-- <button class="btn btn-primary actions" type="button" (click)="increment(i)">+</button> -->
+                      </span>
+                    </mat-card-content>
+
+                  </mat-card>
+            </div>
+            <div class="card-footer text-muted">
+              Total amount : {{getTotalPrice(order)}}
+            </div>
+          </div>
+    </div>
+

@@ -1,0 +1,24 @@
+<mat-toolbar>
+    <button mat-icon-button class="example-icon" >
+        <mat-icon> local_pizza</mat-icon>
+    </button>
+    <span class="nav-header">Pizzapp</span>
+
+
+    <button mat-icon-button class="nav-button favorite-icon" (click)="navigateToHistory()">
+        <mat-icon></mat-icon> history
+    </button>
+    <button  mat-icon-button class="nav-button" 
+    (click)="openLoginDialog()">
+    <mat-icon ></mat-icon> Login
+</button>
+    <button *ngIf="showSignUp" mat-icon-button class="nav-button" 
+        (click)="openSignUpDialog()">
+        <mat-icon >form</mat-icon> Register
+    </button>
+    <button *ngIf="!showSignUp" mat-icon-button class="nav-button" 
+    (click)="onSignOut()">
+    <mat-icon ></mat-icon> signOut
+</button>
+
+</mat-toolbar>

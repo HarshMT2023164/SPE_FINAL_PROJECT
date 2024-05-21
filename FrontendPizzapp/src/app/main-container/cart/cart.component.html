@@ -1,0 +1,28 @@
+<div class="card ">
+  <div class="card-header">
+    <h1>Your Cart</h1>
+  </div>
+   <div class="card-body">
+      <mat-card class="pizza-card" *ngFor="let pizza of cartList ; let i = index">
+    <mat-card-title-group>
+      <mat-card-title>{{pizza.name}}</mat-card-title>
+      <mat-card-subtitle>Rs. {{pizza.price}}</mat-card-subtitle>
+      <img mat-card-sm-image src={{pizza.url}} >
+    </mat-card-title-group>
+    <mat-card-content>
+      <span>
+        <button class="btn btn-primary actions" type="button" (click)="decrement(i)" >-</button>
+        {{cartMap[i].quantity}}
+        <button class="btn btn-primary actions" type="button" (click)="increment(i)">+</button>
+      </span>
+    </mat-card-content>
+  </mat-card>
+  </div> 
+  <div class="card-footer text-muted">
+   Total : {{getTotal()}}  Rs.
+  </div>
+</div>
+  <button class="btn btn-primary w-100 checkout-button"  (click)="checkOut()">Checkout</button>
+
+
+  

@@ -1,0 +1,50 @@
+version: '3.8'
+
+services:
+  frontend:
+    image: salonisoni/frontend-pizzapp-image:latest
+    container_name: frontend
+    ports:
+      - "4200:80" # Adjust to match your Angular application's port
+    depends_on:
+      - backend
+    environment:
+      API_URL: http://backend:8085 # Example environment variable to communicate with backend
+    networks:
+      - app-network
+
+  backend:
+    image: salonisoni/backend-harsh-pizzapp:latest
+    container_name: backend
+    ports:
+      - "8085:8085" # Adjust to match your Spring Boot application's port
+    depends_on:
+      - db
+    environment:
+      DB_URL: jdbc:mysql://db:3306/pizza?createDatabaseIfNotExist=true
+      DB_USERNAME: root
+      DB_PASSWORD: Rhs@342001
+    networks:
+      - app-network
+
+  db:
+    image: mysql:8.0
+    container_name: db
+    ports:
+      - "3307:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: Rhs@342001
+      MYSQL_DATABASE: pizza
+      MYSQL_USER: root
+      MYSQL_PASSWORD: Rhs@342001
+    volumes:
+      - db_data:/var/lib/mysql
+    networks:
+      - app-network
+
+volumes:
+  db_data:
+
+networks:
+  app-network:
+    driver: bridge

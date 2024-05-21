@@ -1,0 +1,18 @@
+/* mat-grid-list{
+    margin: 10px;
+} */
+.card{
+    /* width: 85%; */
+    width: 100%;
+    margin-bottom: 10px;
+}
+.order-container{
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.pizza-card{
+    margin-bottom: 5px;
+}

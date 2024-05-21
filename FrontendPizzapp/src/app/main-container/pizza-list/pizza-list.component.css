@@ -1,0 +1,44 @@
+.card{
+    margin-top: 10px;
+}
+.form-inline{
+    display: flex;
+    
+}
+.search-field{
+    margin-right: 10px;
+    
+}
+.search-input{
+    margin-right: 10px;
+}
+.pizza-card{
+    margin-top: 10px;
+    width: 85%;
+}
+mat-card-content{
+    display: flex;
+    justify-content: space-between;
+    
+}
+mat-card-subtitle{
+    margin-bottom: 3px;
+}
+.card-button{
+    margin-top: 3px;
+}
+.star-icon{
+    position: relative;
+    top: 5px;
+}
+.sort-dropdown{
+    margin-left: 10px;
+}
+.input-group{
+    width: 85%;
+    display: flex;
+    justify-content: space-between;
+}
+.mat-card-sm-image{
+    width: 100px;
+}
