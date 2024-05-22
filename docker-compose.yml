@@ -31,11 +31,11 @@ services:
     image: mysql:8.0
     container_name: db
     ports:
-      - "3308:3306"
+      - "3307:3306"
     environment:
       MYSQL_ROOT_PASSWORD: Rhs@342001
       MYSQL_DATABASE: pizza
-      MYSQL_USER: root
+      # MYSQL_USER: root
       MYSQL_PASSWORD: Rhs@342001
     volumes:
       - db_data:/var/lib/mysql
