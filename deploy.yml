@@ -1,0 +1,9 @@
+---
+- name: Run Docker Compose
+  hosts: localhost
+  gather_facts: no
+  tasks:
+    - name: Run Docker Compose
+      command: docker-compose up
+      args:
+        chdir: /var/lib/jenkins/workspace/SPE_FINAL_PROJECT
