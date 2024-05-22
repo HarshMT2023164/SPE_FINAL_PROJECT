@@ -6,5 +6,7 @@
   gather_facts: no
   tasks:
     - name: Run Docker Compose
-      command: docker-compose up
+      command: docker-compose up -d
+      args:
+        chdir: /var/lib/jenkins/workspace/spe-major-project
 
