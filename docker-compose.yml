@@ -5,7 +5,7 @@ services:
     image: salonisoni/frontend-pizzapp-image:latest
     container_name: frontend
     ports:
-      - "4200:80" # Adjust to match your Angular application's port
+      - "4300:80" # Adjust to match your Angular application's port
     depends_on:
       - backend
     environment:
