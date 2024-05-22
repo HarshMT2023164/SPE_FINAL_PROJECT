@@ -7,6 +7,4 @@
   tasks:
     - name: Run Docker Compose
       command: docker-compose up
-      args:
-        chdir: /var/lib/jenkins/workspace/SPE_FINAL_PROJECT
 
