@@ -10,4 +10,3 @@
       args:
         chdir: /var/lib/jenkins/workspace/SPE_FINAL_PROJECT
 
-        - name: Pull Docker Image from Docker Hub
