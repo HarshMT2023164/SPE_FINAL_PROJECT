@@ -2,14 +2,14 @@ version: '3.8'
 
 services:
   frontend:
-    image: salonisoni/frontend-pizzapp-image-saloni:latest
+    image: salonisoni/frontend-pizzapp-image-c1:latest
     container_name: frontend
     ports:
       - "4200:80" # Adjust to match your Angular application's port
     depends_on:
       - backend
     environment:
-      API_URL: http://backend:8080 # Example environment variable to communicate with backend
+      API_URL: http://backend:8085 # Example environment variable to communicate with backend
     networks:
       - app-network
 
